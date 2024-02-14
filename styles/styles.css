@@ -1,0 +1,710 @@
+/*Global*/
+html{
+    font-size: 62.5%;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+img{
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+:root {
+    --blue: #122857;
+    --bluegreen: #1dd3c6;
+}
+
+/* utilities */
+.flex-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 13rem;
+    width: 80%;
+}
+.underline{
+    border-bottom: #1dd3c6 0.5rem solid;
+}
+/* header */
+.site-init {
+    position: relative;
+    height: 40rem;
+    color:#424242;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.site-init h1{
+    font-size: 5rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+.site-init a{
+    font-size: 2rem;
+    font-weight: bold;
+    color:#424242;
+
+}
+.site-init nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3rem;
+}
+.site-init::before {
+    content: "";
+    background-image: url('../img/31-02-bath-dog-DOUXO.jpg.avif');
+    background-size: cover;
+    background-position: 50% 70%;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.site-init p{
+    font-size: 3rem;
+    text-align: center;
+    margin-top: 5rem;
+    width: 70%;
+    font-weight: bold;
+}
+.site-init::after {
+    content: "";
+    background: linear-gradient(to right, rgba(0, 225, 255, 0.35), transparent);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.site-init h1, .site-init a,.site-init span,.site-init p,.header-btn{
+    position: relative;
+    z-index: 1;
+}
+.header-btn{
+    padding: 1.5rem 5rem;
+    background-color: #1dd3c6;
+    border-radius: 1.5rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 2rem;
+}
+/* main */
+
+/* welcome */
+.welcome-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.welcome-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 40rem;
+    width: 80%;
+    margin: 5rem auto;
+}
+.welcome-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.welcome-img img{
+    display: block;
+    width: 50rem;
+    border-radius: 20px;
+}
+.welcome-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    flex-direction: column;
+}
+.welcome-btn{
+    padding: 1.5rem 5rem;
+    background-color: #1dd3c6;
+    border-radius: 1.5rem;
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    margin-top: 2rem;
+    text-transform: capitalize;
+}
+/*packages*/
+
+.packages-container{
+    background-image: url('../img/ec1h-educating-your-children-on-how-to-care-for-a-cat-hero-new.png');
+    height: 50rem;
+    background-size: cover;
+    background-position: 50% 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10rem;
+}
+.img-package{
+    width: 30rem;
+    
+}
+.img-package img{
+    display: block;
+    width: 100%;
+    border-radius: 3rem 3rem 0 0;
+
+}
+.package{
+    position: relative;
+    display: flex;   
+    align-items: center;
+    flex-direction: column;
+    background: rgba(82, 223, 233, 0.6);
+    border-radius: 3rem;
+    color: white;
+    height: 90%;
+}
+.package h3{
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem 0;
+}
+.info-package{
+    width: 80%;
+    margin: 0 auto;
+    height: 40%;
+}
+.package p{
+    font-size: 1.5rem;
+}
+.package ul li{
+    margin-bottom: 1rem;
+}
+.package-btn{
+    background: rgba(43, 43, 43, 0.7);
+    color: white;
+    padding: 1rem 2rem;
+    width: 100%;
+    border-radius: 0 0 3rem 3rem;
+    position: absolute;
+    bottom: 0;
+    font-size: 2rem;
+    font-weight: bold;
+}
+/* services */
+.services-container{
+    margin: 5rem auto;
+    text-align: center;
+
+}
+.services-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 5rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 10rem;
+}
+.img-services-container{
+    width: 30rem;
+}
+.highlighting-titles{
+    color: rgb(0, 140, 255);
+}
+.services-container h2{
+    font-size: 5rem;
+    color: #424242;
+}
+.horizontal-line{
+    margin: 0 auto;
+    height: 0.5rem;
+    width: 100%; 
+    background-color: #424242;
+}
+.left-list-service{
+    margin-right: 5rem;
+}
+.element-list-left-container{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: right;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.element-list-right-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.left-list-service ul li{
+    list-style: none;
+    margin-bottom: 2rem;
+}
+.right-list-service ul li{
+    list-style: none;
+    margin-bottom: 2rem;
+}
+/* footer */
+footer {
+    margin-top: auto;
+}
+.site-footer{
+    background-color: #231651;
+    height: 10rem;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.site-footer p{
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+.site-footer a{
+    color: rgb(11, 161, 247);
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-bottom: #fff 0.2rem solid;
+}
+.site-footer nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3rem;
+}
+/*
+#FF8484
+#231651
+#2374AB
+
+*/
+
+/*!Register*/
+
+.main-register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin:2rem auto;
+    width: 100%;
+
+}
+.client-info{
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+.highlighting-green{
+    color: rgb(6, 196, 6);
+}
+#pets-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+}
+.delete-btn{
+    background-color: #d61717;
+    color: white;
+    padding: 0.5rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    margin-left: 1rem;
+}
+.register-title{
+    margin-top: 10rem;
+    font-size: 7rem;
+    margin-bottom: 2rem;
+    border-bottom: #231651 0.8rem solid;
+}
+
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+table td,
+table th {
+    border: var(--blue) solid 1px;
+    padding: calc(1rem - 3px);
+    text-align: center;
+}
+th {
+    background-color: var(--blue);
+    color: #fff;
+}
+table thead {
+    background-color: var(--blue);
+    border-bottom: var(--bluegreen) solid 0.5rem;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: lightgray;
+
+}
+
+tr:hover td {
+    background-color: var(--bluegreen);
+    color: white;
+
+}
+.underline a{
+    text-decoration: none;
+}
+nav a {
+    text-decoration: none;
+}
+.form-container{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.6rem;
+    box-shadow: #122857 0.3rem 0.3rem 0.3rem 0.3rem;
+    margin: 5rem auto;
+    padding: 5rem;
+}
+.form-container h1{
+    font-size: 4rem;
+    margin-top: 5rem;
+    color: #122857;
+}
+.form-container label{
+    color: #777777;
+}
+.input-group{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+}
+
+.select-group{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    flex-wrap: wrap;
+    margin: 1rem auto; 
+}
+.correction-label{
+    margin: 1rem 0;
+}
+.select-group select{
+    height: 3rem;
+    border: none;
+    border-bottom: #1dd3c6 0.3rem solid;
+    border-radius: 1.2rem;
+    color: #777777;
+    font-size: 1.6rem;
+}
+.note{
+    color: rgb(240, 140, 140) !important;
+    
+}
+.input-group input{
+    border: none;
+    border-bottom: #1dd3c6 0.3rem solid;
+    height: 3rem;
+    border-radius: 1.2rem;
+    padding-left: 1rem;
+    color: #122857;
+    width: 90%;
+}
+
+.underline-register{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 70%;
+    border-bottom: #08475a 0.3rem solid;
+    margin-bottom: 5rem;
+
+}
+.btn-register{
+    margin: 1rem auto 5rem auto;
+    width: 50%;
+    padding: 1rem 0;
+    color: white;
+    background-color: #122857;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-radius: 1rem;
+}
+/*!Card*/
+.petCard{
+    
+    border-radius: 0.5rem;
+    padding: 1.7rem;
+    width: 30rem;
+    height: auto;
+    font-size: 1.6rem;
+}
+.change-color{
+    color: #F5F5DC;
+    font-weight: bold;
+}
+.name-pet{
+    color: #08475a;
+    font-weight: bold;
+}
+.detele-container{
+    display: flex;
+    justify-content: right;
+}
+
+.btn-reverse-container{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 80%;
+    margin-top: 5rem;
+}
+#searchBar{
+    border: none;
+    border-bottom: #122857 0.3rem solid;
+    height: 3rem;
+    border-radius: 1.2rem;
+    padding-left: 1rem;
+    color: #122857;
+    width: 30%;
+}
+.btn-reverse{
+    background-color: #08475a;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+#pets{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1.7rem;
+    row-gap: 1rem;
+}
+#title-card{
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    color: #155e59;
+}
+.input-alert-error{
+    border-bottom: #d61717 0.3rem solid !important;
+}
+#notificacions{
+    width: 100%;
+}
+.alert-error{
+    position: fixed;
+    margin-left: auto;
+    top: 10%;
+    right: 0;
+    z-index: 1000;
+    background-color: rgb(166, 19, 19);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+    width: 20%;
+    border-radius: 1rem 0 0 1rem;
+    border: rgb(255, 135, 135) 0.3rem solid;
+    border-right: 0;
+    font-size: 1.3rem;
+}
+.alert-success{
+    top: 10%;
+    position: fixed;
+    margin-left: auto;
+    right: 0;
+    z-index: 1000;
+    background-color: #4CAF50;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    width: 20%;
+    box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2);
+    border-radius: 1rem 0 0 1rem;
+    border: rgb(0, 96, 10) 0.3rem solid;
+    border-right: 0;
+    font-size: 1.3rem;
+}
+.hidden{
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .site-init h1 {
+        margin-top: 7rem;
+        font-size: 2.5rem;
+    }
+    .site-init nav{
+        margin-top: 0rem;
+    }
+    .register-title{
+        font-size: 4rem;
+    }
+    .underline{
+        border: none;
+    }
+    .underline a{
+        border-bottom: #1dd3c6 0.5rem solid;
+    }
+    .register-title{
+        margin: 10rem auto;
+        border: none;
+        text-align: center;
+    }
+    .client-info{
+        width: 100%;
+    }
+    #pets-container{
+        width: 100%;
+    }
+    table{
+        width: 95%;
+    }
+    .site-init p{
+        font-size: 2rem;
+        margin-bottom: 5rem;
+    }
+    .welcome-section{
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        margin-bottom: 15rem;
+    }
+    .welcome-text p{
+        font-size: 1.6rem;
+    }
+    .services-container{
+        flex-direction: column;
+    }
+    .services-section{
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+    .left-list-service{
+        margin-right: 0;
+    }
+    .element-list-left-container{
+        flex-direction: row;
+        justify-content: left;
+    }
+    .horizontal-line{
+        margin-top: 2rem;
+        width: 99%; 
+        background-color: #424242;
+    }
+    .services-container h2{
+        font-size: 4rem;
+    }
+    .right-list-service{
+        margin-left: 0;
+        width: 80%;
+    }
+    .element-list-right-container{
+        justify-content: left;
+    }
+    .packages-container{
+        flex-direction: column;
+        background-image: none;
+        background-color: #231651;
+        height: 150rem;
+        gap: 5rem;
+    }
+    .package{
+        height: 80%;
+        margin: 2rem auto;
+    }
+    .site-footer p{
+        font-size: 1.3rem;
+    }
+    .select-group select{
+        width: 90%;
+    }
+    .input-group input{
+        width: 90%;
+    }
+    table{
+        width: 90%;
+    }
+    .none-display{
+        display: none;
+    }
+    .form-container{
+        width: 90%;
+        padding: 0;
+    }
+    #pets{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+    .petCard{
+        width: 100%;
+    }
+    #searchBar{
+        width: 60%;
+    }
+}

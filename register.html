@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+
+</head>
+<body>
+    <header class="site-init">
+        <div class="flex-container" >
+            <span class="underline"><h1>The fashion pet</h1></span>
+            <nav>
+                <span class="underline"><a href="./index.html">Home</a></span>
+                <span class="underline"><a href="./register.html">Register</a></span>
+            </nav>
+        </div>
+        <h2 class="register-title">Register a New Pet</h2>
+    </header>
+    <main class="main-register">
+        <div id="notificacions" class="hidden">
+            
+        </div>
+        <form action="" class="form-container">
+            <div class="underline-register">
+                <h1>Register</h1>
+            </div>
+            <div class="input-group">
+                <label for="" >Name</label>
+                <input type="text" id="name">
+            </div>
+            <div class="input-group">
+                <label for="" >Age</label>
+                <input type="number" id="age" >  
+            </div>
+            <div class="select-group">
+                <label for="">Gender</label>
+                <select name="" id="gender" >
+                    <option value="" disabled selected>-- Select Gender ---</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="">Species</label>
+                <input type="text" id="species">
+            </div>
+            <div class="input-group">
+                <label for="">Breed</label>
+                <input type="text" id="breed">
+            </div>
+            <div class="select-group">
+                <label for="">Select Package</label>
+                <select name="" id="package">
+                    <option value="" disabled selected>-- Select Package --</option>
+                    <option value="Basic">Basic</option>
+                    <option value="Standard">Standard</option>
+                    <option value="Premium">Premium</option>
+                    <option value="None">None</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="" class="note">If you want to add any service individually enter it in the section below, if you want to add more than one separate them by commas (Relaxing Massage Service, Vaccines).</label>
+                <label for="" class="correction-label">Extra Services</label>
+                <input type="text" id="service">
+            </div>
+            <div class="input-group">
+                <label for="">Owner Name</label>
+                <input type="text" id="owner">
+            </div>
+            <div class="input-group">
+                <label for="">Description</label>
+                <input type="text" id="description">
+            </div>
+            <div class="select-group">
+                <label for="">Select Payment Method</label>
+                <select name="" id="payment">
+                    <option value="" disabled selected>-- Select Payment Method --</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Debit Card">Debit Card</option>
+                    <option value="Cash">Cash</option>
+                </select>
+            </div>
+            <button onclick="register(event)" class="btn-register">Button</button>
+        </form>
+        <h2 id="title-card">Clients</h2>
+        <div class="underline-register"></div>
+        <div id="pets" >
+
+        </div>
+        <div class="btn-reverse-container">
+            <input type="text" id="searchBar" onkeyup="searchFunction()" placeholder="Search by name">
+            <button class= "btn-reverse" onclick="reverseOrder()">Reverse</button>
+        </div>
+        
+        <section class="client-info">  
+            <div id="pets-container">
+
+            </div>
+        </section>
+        
+    </main>
+    
+    <footer class="site-footer">
+        <nav>
+            <a href="./index.html">Home</a>
+            <a href="./register.html">Register</a>
+        </nav>
+        <p id="info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, natus.</p>
+    </footer>
+    <script src="./scripts/display.js"></script>
+    <script src="./scripts/register.js"></script>
+</body>
+</html>
