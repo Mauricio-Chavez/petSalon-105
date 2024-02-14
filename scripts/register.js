@@ -44,7 +44,7 @@ function deletePet(id){
     let deleteIndex;
     for (let i = 0; i < salon.pets.length; i++) {
         let pet = salon.pets[i];
-        if(pet.id === id){
+        if(pet.id == id){
             deleteIndex = i;
             break;
         }
