@@ -83,8 +83,12 @@ function register(event){
         owner.value = "";
         description.value = "";
         payment.value = "";
-        displayPetCards();
+    
+        displayNames();
         displayCount();
+        displayPetCards();
+    
+        
         showNotifications("The pet has been registered", "alert-success");
     }else{
         showNotifications("Incomplete required fields", "alert-error");
