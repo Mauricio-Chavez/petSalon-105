@@ -585,6 +585,39 @@ nav a {
 .hidden{
     display: none;
 }
+
+/*!Services*/
+.main-services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin:10rem auto;
+    width: 80%;
+    gap: 5rem;
+    align-items: stretch;
+}
+.form-service{
+    width: 50%;
+    margin: 0;
+}
+.table-container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+.table-container h2{	
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: #122857;
+    text-align: center;
+}
+.table-container table{
+    top: 0;
+}
 @media screen and (max-width: 768px) {
     .flex-container {
         flex-direction: column;
