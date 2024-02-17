@@ -3,6 +3,7 @@ function saveArray(item) {
     itemsArray.push(item);
     let val = JSON.stringify(itemsArray);
     localStorage.setItem('services',val);
+    
 }
 
 function readItems(){

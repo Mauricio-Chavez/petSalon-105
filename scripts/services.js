@@ -4,7 +4,7 @@ $(document).ready(function(){
     console.log("Service Page");
 
     $('#btnService').click(addService)
-    displayStoredItems();
+    displayStoredItems(services);
 });
 function addService(event){
     event.preventDefault();
@@ -16,7 +16,7 @@ function addService(event){
     saveArray(newService);
     $('#txtService').val("");
     $('#price').val("");
-    displayItems(services);
+    displayStoredItems();
 }
 function Service(description,price){
     this.description = description;
