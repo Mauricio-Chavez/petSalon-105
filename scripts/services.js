@@ -5,7 +5,6 @@ $(document).ready(function(){
 
     $('#btnService').click(addService)
     displayStoredItems();
-    
 });
 function addService(event){
     event.preventDefault();
