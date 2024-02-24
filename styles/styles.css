@@ -479,6 +479,32 @@ nav a {
     font-weight: bold;
     border-radius: 1rem;
 }
+.btn-container{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    width: 80%;
+}
+#deleteAllButton{
+    background-color: #d61717;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+}
+#addPetsButton{
+    background-color: #08475a;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    margin-left: 1rem;
+}
+
 /*!Card*/
 .petCard{
     
@@ -507,7 +533,6 @@ nav a {
     align-items: center;
     flex-direction: row;
     width: 80%;
-    margin-top: 5rem;
 }
 #searchBar{
     border: none;

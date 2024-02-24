@@ -65,6 +65,13 @@
                     <option value="None">None</option>
                 </select>
             </div>
+            <div class="select-group">
+                <label for="">Select Service</label>
+                <select name="" id="txtService">
+                    <option value="" disabled selected>-- Select Service --</option>
+                    <option value="Relaxing Massage Service">Relaxing Massage Service</option>
+                </select>
+            </div>
             <div class="input-group">
                 <label for="" class="note">If you want to add any service individually enter it in the section below, if you want to add more than one separate them by commas (Relaxing Massage Service, Vaccines).</label>
                 <label for="" class="correction-label">Extra Services</label>
@@ -78,6 +85,7 @@
                 <label for="">Description</label>
                 <input type="text" id="description">
             </div>
+            
             <div class="select-group">
                 <label for="">Select Payment Method</label>
                 <select name="" id="payment">
@@ -87,7 +95,10 @@
                     <option value="Cash">Cash</option>
                 </select>
             </div>
+
             <button onclick="register(event)" class="btn-register">Submit</button>
+
+
         </form>
         <h2 id="title-card">Clients</h2>
         <div class="underline-register"></div>
@@ -104,6 +115,10 @@
 
             </div>
         </section>
+        <div class="btn-container">
+            <button id="deleteAllButton" onclick="deleteAllPets()" >Delete All</button>
+            <button id="addPetsButton" onclick="addTestPets()">Test</button>
+        </div>
         
     </main>
     
@@ -115,7 +130,10 @@
         </nav>
         <p id="info">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, natus.</p>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./scripts/storeManager.js"></script>
     <script src="./scripts/display.js"></script>
-    <script src="./scripts/register.js"></script>
+    <script src="./scripts/services.js"></script>
+    <script src="./scripts/register.js"></script>    
 </body>
 </html>

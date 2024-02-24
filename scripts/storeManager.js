@@ -1,17 +1,20 @@
-function saveArray(item) { 
-    let itemsArray = readItems();
+function saveArray(item,key) { 
+    let itemsArray = readItems(key);
     itemsArray.push(item);
     let val = JSON.stringify(itemsArray);
-    localStorage.setItem('services',val);
-    
+    localStorage.setItem(key,val);
 }
 
-function readItems(){
-    let data = localStorage.getItem('services');
+function readItems(key){
+    let data = localStorage.getItem(key);
     if(!data){
         return [];
     }else{
         let list = JSON.parse(data);
         return list;
     }
+}
+function updateStorage(pets, key) { 
+    let val = JSON.stringify(pets);
+    localStorage.setItem(key,val);
 }

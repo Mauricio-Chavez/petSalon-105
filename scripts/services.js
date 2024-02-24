@@ -1,28 +1,45 @@
 
-let services =[];
+let servicesA =[];
 $(document).ready(function(){
-    console.log("Service Page");
-
     $('#btnService').click(addService)
-    displayStoredItems(services);
+    displayStoredItems(servicesA);
 });
+
 function addService(event){
     event.preventDefault();
-    let inputService = $('#txtService').val();
-    let inputPrice = $('#price').val();
-    console.log(inputService);
-    let newService = new Service(inputService,inputPrice);
-    services.push(newService);
-    saveArray(newService);
-    $('#txtService').val("");
-    $('#price').val("");
+    if(valid()){
+        let inputService = $('#txtService').val();
+        let inputPrice = $('#price').val();
+        let newService = new Service(inputService,inputPrice);
+        servicesA.push(newService);
+        saveArray(newService,"service");
+        $('#txtService').val("");
+        $('#price').val("");
+        showNotifications("Service added", "alert-success");
+    }else{
+        showNotifications("Incomplete required fields", "alert-error");
+    }
+    
     displayStoredItems();
 }
 function Service(description,price){
     this.description = description;
     this.price = price;
 }
-
+function valid(){
+    let validation = true;
+    $('#txtService').removeClass("input-alert-error");
+    $('#price').removeClass("input-alert-error");
+    if (!txtService.value) {
+        $('#txtService').addClass("input-alert-error");
+        validation = false;
+    }
+    if (!price.value) {
+        $('#price').addClass("input-alert-error");
+        validation = false;
+    }
+    return validation;
+}
 // function displayItems(items){
 //     let htmlList = $('#services');
 //     htmlList.html("");
@@ -41,23 +58,23 @@ function displayItems(items){
     let row;
     for(let i= 0; i<items.length; i++){
         let item = items[i];
-        console.log(item);
         row = `<tr><td>${item.description}</td><td>$ ${item.price}</td><td><button class="delete-btn" data-index="${i}">Delete</button></td></tr>`;
         htmlTable.append(row);
     }
 }
+
 function displayStoredItems(){
-    let items = readItems();
+    let items = readItems('service');
     displayItems(items);
 }
 function updateArray(items) { 
     let val = JSON.stringify(items);
-    localStorage.setItem('services',val);
+    localStorage.setItem('service',val);
 }
 
 $(document).on('click', '.delete-btn', function() {
     let index = $(this).data('index');
-    let items = readItems();
+    let items = readItems('service');
     items.splice(index, 1);
     updateArray(items);
     displayItems(items);
